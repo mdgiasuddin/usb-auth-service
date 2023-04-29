@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  auth_service_db:
+    image: "postgres"
+    restart: always
+    ports:
+      - "5442:5432"
+    volumes:
+      - auth_service_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: auth_service
+      POSTGRES_USER: user_giash
+      POSTGRES_PASSWORD: nE5kMc7JCGNqwDQM
+volumes:
+  auth_service_data:
